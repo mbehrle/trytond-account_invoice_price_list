@@ -1,5 +1,5 @@
 #This file is part account_invoice_price_list module for Tryton.
-#The COPYRIGHT file at the top level of this repository contains 
+#The COPYRIGHT file at the top level of this repository contains
 #the full copyright notices and license terms.
 from trytond.pool import Pool, PoolMeta
 from trytond.transaction import Transaction
@@ -15,9 +15,9 @@ class InvoiceLine:
         Product = Pool().get('product.product')
         res = super(InvoiceLine, self).on_change_product()
         if self.invoice.party.sale_price_list and \
-                self.invoice.type in ['out_invoice','out_credit_note']:
+                self.invoice.type in ['out_invoice', 'out_credit_note']:
             with Transaction().set_context({
-                    'price_list':self.invoice.party.sale_price_list,
+                    'price_list': self.invoice.party.sale_price_list,
                     'customer': self.invoice.party.id,
                 }):
                 res['unit_price'] = Product.get_sale_price([self.product],
