@@ -33,14 +33,14 @@ setup(name='trytonzz_account_invoice_price_list',
     author='Zikzakmedia SL',
     author_email='zikzak@zikzakmedia.com',
     url='http://www.zikzakmedia.com',
-    download_url="https://bitbucket.org/zikzakmedia/trytonzz-account_invoice_price_list",
-    package_dir={'trytonzz.modules.account_invoice_price_list': '.'},
+    download_url="https://bitbucket.org/zikzakmedia/trytond-account_invoice_price_list",
+    package_dir={'trytond.modules.account_invoice_price_list': '.'},
     packages=[
-        'trytonzz.modules.account_invoice_price_list',
-        'trytonzz.modules.account_invoice_price_list.tests',
+        'trytond.modules.account_invoice_price_list',
+        'trytond.modules.account_invoice_price_list.tests',
         ],
     package_data={
-        'trytonzz.modules.account_invoice_price_list': info.get('xml', []) \
+        'trytond.modules.account_invoice_price_list': info.get('xml', []) \
             + ['tryton.cfg', 'locale/*.po'],
         },
     classifiers=[
@@ -63,9 +63,9 @@ setup(name='trytonzz_account_invoice_price_list',
     install_requires=requires,
     zip_safe=False,
     entry_points="""
-    [trytonzz.modules]
-    account_invoice_price_list = trytonzz.modules.account_invoice_price_list
+    [trytond.modules]
+    account_invoice_price_list = trytond.modules.account_invoice_price_list
     """,
     test_suite='tests',
-    test_loader='trytonzz.test_loader:Loader',
+    test_loader='trytond.test_loader:Loader',
 )
