@@ -12,8 +12,8 @@ cuenta si el cliente dispone de tarifa de venta.
 Este módulo permite utilizar la tarifa de venta del cliente para calcular el
 precio final.
 
-Módulos que dependen
-====================
+Módulos de los que depende
+==========================
 
 Instalados
 ----------
