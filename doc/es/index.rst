@@ -9,14 +9,3 @@ cuenta si el cliente dispone de tarifa de venta.
 
 Este módulo permite utilizar la tarifa de venta del cliente para calcular el
 precio final.
-
-Dependencias
-------------
-
-* Contabilidad_
-* Facturación_
-* `Tarifas de producto`_
-
-.. _Contabilidad: ../account/index.html
-.. _Facturación: ../account_invoice/index.html
-.. _Tarifas de producto: ../product_price_list/index.html
