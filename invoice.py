@@ -15,7 +15,8 @@ class InvoiceLine:
         Product = Pool().get('product.product')
         res = super(InvoiceLine, self).on_change_product()
         if self.invoice.party and self.invoice.party.sale_price_list and \
-                self.invoice.type in ['out_invoice', 'out_credit_note']:
+                self.invoice.type in ['out_invoice', 'out_credit_note'] and \
+                self.product:
             with Transaction().set_context({
                     'price_list': self.invoice.party.sale_price_list,
                     'customer': self.invoice.party.id,
