@@ -19,8 +19,9 @@ class InvoiceLine:
         super(InvoiceLine, self).on_change_product()
         party = self.party or self.invoice.party
 
+        invoice_type = self.invoice.type if self.invoice else self.invoice_type
         if (party and party.sale_price_list and self.product
-                and self.invoice.type in ['out_invoice', 'out_credit_note']):
+                and invoice_type in ['out_invoice', 'out_credit_note']):
             with Transaction().set_context({
                     'price_list': party.sale_price_list.id,
                     'customer': party.id,
