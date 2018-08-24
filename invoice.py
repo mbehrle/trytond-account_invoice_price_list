@@ -8,8 +8,7 @@ from trytond.transaction import Transaction
 __all__ = ['InvoiceLine']
 
 
-class InvoiceLine:
-    __metaclass__ = PoolMeta
+class InvoiceLine(metaclass=PoolMeta):
     __name__ = 'account.invoice.line'
 
     @fields.depends('party', 'invoice', 'quantity')
