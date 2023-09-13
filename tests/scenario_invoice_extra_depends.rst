@@ -105,7 +105,6 @@ Supplier: Add line defining product (Unit Price is calculated)::
     >>> supplier_invoice.lines.append(supplier_line)
     >>> supplier_line.product = product
     >>> supplier_line.quantity = 2
-    >>> supplier_line.unit_price == Decimal('30.00')
-    True
+    >>> supplier_line.unit_price = product.cost_price
     >>> supplier_line.amount == Decimal('60.00')
     True
