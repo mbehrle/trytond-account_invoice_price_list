@@ -1,2 +1,2 @@
-Account Invoice Price List Module
+Account Invoice Price List Modul
 #################################

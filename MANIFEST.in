@@ -1,9 +1,7 @@
-include INSTALL
-include README
 include CHANGELOG
 include COPYRIGHT
 include LICENSE
-include tryton.cfg
-include *.xml
-include locale/*.po
-include doc/*
+include README.rst
+include README.md
+include icons/LICENSE
+graft doc

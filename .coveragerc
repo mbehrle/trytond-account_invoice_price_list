@@ -1,0 +1,5 @@
+[run]
+source = trytond.modules.account_invoice_price_list
+
+[report]
+omit = */tests/*,*/setup.py
